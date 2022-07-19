@@ -1,7 +1,6 @@
 import axios, { AxiosRequestConfig, AxiosInstance, AxiosPromise } from "axios";
 
 const initialization = (config: AxiosRequestConfig): AxiosInstance => {
-  console.log("config: ", config);
   const service = axios.create(config);
 
   // request interceptor

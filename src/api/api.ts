@@ -5,7 +5,6 @@ import axiosInstance from "./axiosSetup";
 const get = <T>(url: string, queryParams?: object): Observable<T> => {
   return defer(() => axiosInstance.get<T>(url, { params: queryParams })).pipe(
     map((result) => {
-      console.log("api result: ", result);
       return result.data;
     })
   );
