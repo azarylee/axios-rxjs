@@ -1,14 +1,17 @@
 import { StrictMode } from "react";
-import * as ReactDOMClient from "react-dom/client";
-import "./__mock__";
+import ReactDOM from "react-dom/client";
 
 import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import "./__mock__";
 
 const rootElement = document.getElementById("root");
-const root = ReactDOMClient.createRoot(rootElement);
+const root = ReactDOM.createRoot(rootElement as Element);
 
 root.render(
   <StrictMode>
     <App />
   </StrictMode>
 );
+
+reportWebVitals();
